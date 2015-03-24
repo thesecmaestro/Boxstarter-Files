@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <settings>
-	<console change_refresh="10" refresh="100" rows="25" columns="80" buffer_rows="5000" buffer_columns="0" shell="" init_dir="" start_hidden="0" save_size="0" background_text_opacity="255">
+	<console change_refresh="10" refresh="100" rows="25" columns="80" buffer_rows="32766" buffer_columns="0" shell="" init_dir="" start_hidden="0" save_size="0" background_text_opacity="255">
 		<colors background_text_opacity="255">
 			<color id="0" r="0" g="0" b="0"/>
 			<color id="1" r="1" g="36" b="86"/>
@@ -177,6 +177,14 @@
 				<color id="14" r="255" g="255" b="0"/>
 				<color id="15" r="255" g="255" b="255"/>
 			</colors>
+		</tab>
+		<tab title="Git" use_default_icon="0">
+			<console shell="%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -NoExit -Command &quot;&amp;{ . (Resolve-Path &quot;$env:LOCALAPPDATA\GitHub\shell.ps1&quot;);  . $env:github_posh_git\profile.example.ps1;}&quot;" init_dir="c:\" priority="2" run_as_user="0" user="" net_only="0" run_as_admin="1"/>
+			<background type="0" r="62" g="26" b="62">
+				<image file="" relative="0" extend="0" position="0">
+					<tint opacity="0" r="0" g="0" b="0"/>
+				</image>
+			</background>
 		</tab>
 		<tab title="Bash" use_default_icon="0">
 			<console shell="C:\cygwin64\bin\bash.exe" init_dir="C:\cygwin64\home\jasonc" priority="2" run_as_user="0" user="" net_only="0" run_as_admin="1"/>
